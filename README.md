@@ -65,12 +65,21 @@ As a Data Analyst from Code Institute Consulting, you are requested by the Telco
 	* We want to cluster similar customers, to predict from which cluster a prospect will belong.
 	* We want to understand a cluster profile to present potential options to maintain or bring the prospect to a non-churnable cluster.
 
-
+-->
 
 
 ## ML Business Case
 
-### Predict Churn
+### Predict odds of a death event from heart failure
+* We want an ML model to predict how likely a patient is to die based on historical clinical data  The target variable is categorical and contains 2-classes. We consider a **classification model**. It is a supervised model, a 2-class, single-label, classification model output: 0 (no death event), 1 (death event).
+* Our ideal outcome is to have a better understanding of the relation between a patient's clinical data and their odds of dying of heart failure, thereby lowering the amount of deaths by heart failure as medical professionals are more aware of the connections, and to make patients more aware of the risks and what they can do to prevent it.
+* The model success metrics are
+	* at least 80% Recall for Death Rate, on train and test set 
+	* The ML model is considered a failure if:
+		* Precision for death event is lower than 80% on train and test set. (We don't want to unnecessarily worry people or overload medical staff with low-risk patients.)
+* The model output is defined as a flag, indicating the probability of a given patient dying of heart failure. This data will be put in by a medical professional, generally a lab assistant or doctor.
+
+<!-- ### Predict Churn
 #### Classification Model
 * We want an ML model to predict if a prospect will churn based on historical data from the customer base, which doesn't include tenure and total charges since these values are zero for a prospect. The target variable is categorical and contains 2-classes. We consider a **classification model**. It is a supervised model, a 2-class, single-label, classification model output: 0 (no churn), 1 (yes churn)
 * Our ideal outcome is to provide our sales team with reliable insight into onboarding customers with a higher sense of loyalty.
